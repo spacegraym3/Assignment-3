@@ -22,12 +22,20 @@ int main(int argc, char** argv){
     char* output_filepath = argv[4];
 
     struct image* barcode_image = barcode(digits, width, height);
+    if (barcode_image == NULL) {
+        printf("Error creating barcode image\n");
+        return -1;
+    }
 
-    // TODO: save result to file
     int result = saveimage(output_filepath, barcode_image);
     if(result != 0) {
         printf("Error saving image to file: %s\n", output_filepath);
+        free(barcode_image->pixels);
+        free(barcode_image);
         return -1;  
     }
+
+    free(barcode_image->pixels);
+    free(barcode_image);
     return result;
 }
