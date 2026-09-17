@@ -1,3 +1,3 @@
 (1) The difference is that filter1 iterates through the pixels startiing from image->width versus filter2 iterates through pixles starting from image-height.  Filter2 at times takes about less than half of the time filter1 takes to execute.  However, the result time appears to be the same.
-(2) 
-(3)
+(2) Initially, the execution time between the two filters is relatively the same.  However, this changes as the size increases.  Filter 2 is the most efficient as the execution time grows linearly as the size does.  Filter 1's execution time seems to grow significantly as the size grows.
+(3) The first level cache miss was 2.2% for filter 1 versus 0.7% for filter 2.  This aligns with the plot graph that showed filter 2 is more efficient based on temporal locality. 

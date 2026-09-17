@@ -233,6 +233,7 @@ valgrind --leak-check=full ./build/image_calc "071537020427" 113 42 "barcode-1.b
 
 ## Step 3: Profiling our Image Filter
 
+
 Good work on your image calculator! For our last step we will be learning how to profile our code. We have provided 2 image operations, in `filter.c`. The Makefile automatically builds `./build/filter` binary.
 
 The filter command is executed as follows:
