@@ -70,7 +70,7 @@ To find the dimension of an image, use the following command:
     - To start, have `barcode.c` return a pointer to this blank image back to `image_calc.c`.
     - Double-check that your `image_calc.c` correctly populates the variable `output_filepath` with the output file path from argv (so that `saveimage` will be called correctly).
 - Once you're all set you should be able to run `make` without any errors.
-- Try running: ```./build/image_calc 071537020427 113 42 barcode barcode.bmp```
+- Try running: ```./build/image_calc 071537020427 113 42 barcode.bmp```
     - This should produce a blank image at barcode.bmp.
 
 

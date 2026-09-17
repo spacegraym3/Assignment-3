@@ -1,8 +1,11 @@
+#define _POSIX_C_SOURCE 200809L
+
 #include "common.h"
 #include "loader.h"
+#include "time.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
-
 
 int filter1(struct image* image) {
     printf("running filter1\n");
